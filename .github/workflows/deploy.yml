@@ -54,11 +54,7 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: |
-            ${{ secrets.DOCKERHUB_IMAGE }}:latest
-            ${{ secrets.DOCKERHUB_IMAGE }}:${{ github.sha }}
-          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_IMAGE }}:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_IMAGE }}:buildcache,mode=max
+          tags: ${{ secrets.DOCKERHUB_IMAGE }}:latest
 
   deploy:
     needs: push-to-docker-hub
