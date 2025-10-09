@@ -62,13 +62,13 @@ function App() {
                                         sx={ { flexGrow: 0, fontWeight: 'bold', color: 'primary.main', mr: 4 } }>
                                 DA
                             </Typography>
-                            <Box sx={ { flexGrow: 1, display: 'flex', gap: 3 } }>
+                            <Box sx={ { flexGrow: 1, display: 'flex', gap: 3, color: 'text.primary' } }>
                                 <Button color="inherit" href="#about">About</Button>
                                 <Button color="inherit" href="#projects">Projects</Button>
                                 <Button color="inherit" href="#experience">Experience</Button>
                                 <Button color="inherit" href="#contact">Contact</Button>
                             </Box>
-                            <IconButton onClick={ () => setDarkMode(!darkMode) } color="inherit">
+                            <IconButton onClick={ () => setDarkMode(!darkMode) } color="primary">
                                 { darkMode ? <LightMode/> : <DarkMode/> }
                             </IconButton>
                         </Toolbar>
