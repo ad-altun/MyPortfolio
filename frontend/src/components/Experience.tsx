@@ -1,97 +1,121 @@
-import {
-    Box,
-    Container,
-    Typography,
-    Grid,
-    Card,
-    CardContent,
-} from '@mui/material';
-import {
-    Work,
-} from '@mui/icons-material';
+import { Box, Container, Typography } from '@mui/material';
+import { Work } from '@mui/icons-material';
+import ResumeCard from './ResumeCard';
+import type { ResumeCardProps } from './ResumeCard';
 
-export const Experience = () => {
-    const experiences = [
+export default function Experience() {
+    const experienceData: ResumeCardProps[] = [
         {
-            title: 'Java Backend Development Bootcamp',
-            company: 'Neue Fische GmbH',
-            period: 'June 2025 - Sept 2025',
+            type: 'experience',
+            logo: 'public/logos/neue-fische-logo.png',
+            institution: 'neuefische GmbH',
+            title: 'Java Backend-Entwicklung Bootcamp',
             location: 'Remote',
-            highlights: [
-                'Mastered Spring Framework, Spring Boot, and Spring Security for enterprise applications',
-                'Implemented CI/CD pipelines with GitHub Actions, Docker, and SonarCloud',
-                'Built RESTful APIs and integrated external services including OpenAI',
-                'Practiced Test-Driven Development with JUnit5, Mockito, and integration tests'
-            ]
+            period: 'Jun. 2025 - Sep. 2025',
+            details: [
+                'Core Java and Object-Oriented Programming: Fundamentals of Java and principles of object-oriented programming.',
+                'Frameworks: Powerful Java frameworks, especially Spring Framework, Spring Boot, and Spring Security for application development.',
+                'Databases: NoSQL, MongoDB.',
+                'DevOps: CI/CD with GitHub Actions, Maven, Docker, Docker Hub, and SonarCloud.',
+                'Testing: Test-Driven Development (TDD), Integration and Unit-Tests, Mockito.',
+                'APIs: RESTful APIs, external APIs – integration of OpenAI into web applications.',
+            ],
         },
         {
-            title: 'Software Developer',
-            company: 'Albert Ziegler GmbH',
-            period: 'Sept 2017 - March 2025',
-            location: 'Giengen an der Brenz, Germany',
-            highlights: [
-                'Developed C-based software for commercial vehicle functions including new features and bug fixes',
-                'Created test simulations and maintained comprehensive technical documentation',
-                'Led weekly team meetings and established best-practice documentation',
-                'Provided on-site support to customer service teams and end customers'
-            ]
+            type: 'experience',
+            logo: 'public/logos/ziegler-logo.png',
+            institution: 'Albert Ziegler GmbH',
+            title: 'Softwareentwickler',
+            location: 'Giengen an der Brenz, Deutschland',
+            period: 'Sep. 2022 - Mär. 2025',
+            details: [
+                'C-basierte Softwareentwicklung für Nutzfahrzeugfunktionen, umfassend die Neuentwicklung, Fehlerbehebung, Codeverbesserung, die Erstellung von Testsimulationen sowie die technische Dokumentation.',
+                'Erstellung von Best-Practice-Dokumentation und Leitung wöchentlicher Besprechungen',
+                'Unterstützung anderer Abteilungen, des Kundendienstes und der Endkunden vor Ort',
+                'Implementierung von Software-Tests und Qualitätssicherung',
+                'Zusammenarbeit in agilen Teams mit Scrum-Methodik',
+            ],
         },
         {
-            title: 'International Customer Service Coordinator',
-            company: 'Temsa Global',
-            period: 'Dec 2015 - July 2017',
+            type: 'experience',
+            logo: 'public/logos/temsa-logo.png',
+            institution: 'Temsa Global - Bus & Coach',
+            title: 'Internationaler Kundendienstkoordinator',
             location: 'Adana, Turkey',
-            highlights: [
-                'Provided electrical, mechanical, and software support through cross-functional collaboration',
-                'Increased vehicle diagnostic capacity by 50% through manufacturer partnerships',
-                'Prepared service bulletins and supported field teams for optimal implementation'
-            ]
-        }
+            period: 'Dez. 2015 - Jul. 2017',
+            details: [
+                'Bereitstellung von elektrischem, mechanischem oder softwarebezogenem Support durch Zusammenarbeit mit Werksabteilungen, OEM und Kunden.',
+                'Steigerung der Fahrzeugdiagnosekapazität um 50 % durch Zusammenarbeit mit dem Hersteller in Italien.',
+                'Vorbereitung von Service Bulletins zur Veröffentlichung und Unterstützung der Teams vor Ort für eine optimale Umsetzung.',
+                'Koordination internationaler Supportanfragen und technischer Problemlösungen',
+                'Schulung von Servicetechnikern in neuen Diagnosemethoden',
+            ],
+        },
     ];
 
     return (
-        <Box id="experience" sx={ {
-            py: 5, bgcolor: 'background.default',
-            width: '100%',
-        } }>
-            <Container sx={ {} }>
-                <Typography variant="h3" component="h2" gutterBottom fontWeight="bold" mb={ 6 } textAlign="center">
-                    Experience
-                </Typography>
-                <Grid container spacing={ 3 }>
-                    { experiences.map(( exp, idx ) => (
-                        <Grid
-                            key={ idx }
-                            sx={ { xs: 12, width: '100%', minWidth: '45rem' } }>
-                            <Card elevation={ 0 } sx={ { border: 1, borderColor: 'divider' } }>
-                                <CardContent>
-                                    <Box sx={ { display: 'flex', gap: 2, mb: 2 } }>
-                                        <Work color="primary"/>
-                                        <Box sx={ { flex: 1 } }>
-                                            <Typography variant="h6" fontWeight="bold">{ exp.title }</Typography>
-                                            <Typography color="text.secondary" gutterBottom>
-                                                { exp.company } • { exp.period }
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary" gutterBottom>
-                                                { exp.location }
-                                            </Typography>
-                                            <Box  sx={ { mt: 2, pl: 2 } }>
-                                                { exp.highlights.map(( highlight, i ) => (
-                                                    <Typography  variant="body2" color="text.secondary"
-                                                                key={ i } sx={ { mb: 0.5 } }>
-                                                        { highlight }
-                                                    </Typography>
-                                                )) }
-                                            </Box>
-                                        </Box>
-                                    </Box>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                    )) }
-                </Grid>
+        <Box id="experience" sx={{  }}>
+            <Container maxWidth="md">
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1 }}>
+                    <Work sx={{ fontSize: 32, color: 'primary.main' }} />
+                    <Typography
+                        variant="h3"
+                        sx={{
+                            typography: { xs: 'h5', md: 'h4' }, mb: 1,
+                        }}
+                        component="h2"
+                        fontWeight="bold"
+                    >
+                        Experience
+                    </Typography>
+                </Box>
+
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                    {/* Timeline styling */}
+                    <Box sx={{ position: 'relative', pl: { xs: 0, md: 4 } }}>
+                        {/* Vertical timeline line */}
+                        <Box
+                            sx={{
+                                display: { xs: 'none', md: 'block' },
+                                position: 'absolute',
+                                left: 11,
+                                top: 30,
+                                bottom: 30,
+                                width: 2,
+                                bgcolor: 'divider',
+                            }}
+                        />
+
+                        {experienceData.map((exp, idx) => (
+                            <Box
+                                key={idx}
+                                sx={{
+                                    position: 'relative',
+                                    mb: idx < experienceData.length - 1 ? 3 : 0,
+                                }}
+                            >
+                                {/* Timeline dot */}
+                                <Box
+                                    sx={{
+                                        display: { xs: 'none', md: 'block' },
+                                        position: 'absolute',
+                                        left: -32,
+                                        top: 24,
+                                        width: 12,
+                                        height: 12,
+                                        bgcolor: 'primary.main',
+                                        borderRadius: '50%',
+                                        border: '3px solid',
+                                        borderColor: 'background.paper',
+                                        zIndex: 1,
+                                    }}
+                                />
+                                <ResumeCard {...exp} />
+                            </Box>
+                        ))}
+                    </Box>
+                </Box>
             </Container>
         </Box>
     );
-};
-
+}
