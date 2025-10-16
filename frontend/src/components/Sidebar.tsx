@@ -7,6 +7,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import { PiLinkedinLogo } from "react-icons/pi";
 import { IoArrowDownOutline } from "react-icons/io5";
+import Footer from "./Footer.tsx";
 
 interface InfoData {
     icon: React.ReactNode;
@@ -88,13 +89,6 @@ export default function Sidebar() {
                             borderTopRightRadius: '.5rem', borderBottomLeftRadius: '.5rem',
                         } }/>
                 </Box>
-                {/*<img src="https://1chooo.com/images/profile.webp" alt="profile-image"*/ }
-                {/*    // style={ { "width": "10rem", "height": "10rem", "borderRadius": "50%", "margin": "1rem auto" } }*/ }
-                {/*     style={ {*/ }
-                {/*         "width": "5rem", "height": "5rem",*/ }
-                {/*         "borderRadius": "20%",*/ }
-                {/*     } }*/ }
-                {/*/>*/ }
                 <Box
                     component="img"
                     sx={ {
@@ -102,7 +96,7 @@ export default function Sidebar() {
                         height: { xs: '5rem', md: '7rem', lg: '10rem' },
                         borderRadius: '20%',
                     } }
-                    src="public\project-images\profile-image.avif"
+                    src="https://i.ibb.co/HDQ357MF/profile-image.jpg"
                     alt="profile-image"
                 />
 
@@ -124,9 +118,10 @@ export default function Sidebar() {
                 {/*<Divider sx={{ width: '100%',}} />*/ }
             </Box>
             <Divider sx={ {
+                width: '75%',
+                display: { xs: contactsOpen ? 'block' : 'none', lg: 'block' },
+                margin: '0 auto',
                 marginTop: '1.5rem',
-                // width: '65%',
-                display: { xs: contactsOpen ? 'block' : 'none', lg: 'block' }
             } }/>
 
             {/*Box for the location and contact information */ }
@@ -169,7 +164,8 @@ export default function Sidebar() {
                                     height: '2rem',
                                     fontSize: '1.2rem',
                                     textAlign: 'center',
-                                    marginRight: '1rem',
+                                    pt: 0.5,
+                                    mx: '.35rem',
                                 } }
                                 >{ info.icon }</Box>
 
@@ -193,6 +189,20 @@ export default function Sidebar() {
                         </Box>
                     ))
                 }
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    width: '100%',
+                }}>
+                    <Divider sx={ {
+                        margin: '0 auto',
+                        marginTop: '1.5rem',
+                        width: '75%',
+                        display: { xs: contactsOpen ? 'block' : 'none', lg: 'block' }
+                    } }/>
+                <Footer />
+                </Box>
             </Box>
         </Paper>
     );
