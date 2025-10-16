@@ -16,7 +16,7 @@ export const projectsData: Record<string, ProjectsData> = {
         title: 'PerTiTrack',
         period: 'January 2024 - Present',
         type: 'Fullstack',
-        image: '/public/project-images/pertitrack.png',
+        image: 'https://i.ibb.co/7t343jzv/pertitrack.png',
         technologies: [
             'Java 21',
             'Spring Boot',

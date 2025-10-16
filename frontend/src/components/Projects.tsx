@@ -37,7 +37,7 @@ export const Projects = () => {
             title: 'Upcoming Project',
             period: 'October 2025 - Present',
             type: 'Frontend',
-            image: '/public/project-images/upcoming-project.jpg',
+            image: 'https://i.ibb.co/ZpSxnXZX/upcoming-project.jpg',
             technologies: [ 'Java 21', 'Spring Boot', 'React', 'TypeScript', 'PostgreSQL', 'Docker' ],
             // features: [
             //     'Quick clock in/out with automatic timestamp recording',
