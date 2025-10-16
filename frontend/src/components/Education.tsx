@@ -7,7 +7,7 @@ export default function Education() {
     const educationData: ResumeCardProps[] = [
         {
             type: 'education',
-            logo: 'public/logos/uni-siegen.png',
+            logo: '/logos/uni-siegen.png',
             institution: 'Universität Siegen',
             title: 'M. Sc. Mechatronik Ingenieurwesen',
             school: 'Faculty of Engineering',
@@ -22,7 +22,7 @@ export default function Education() {
         },
         {
             type: 'education',
-            logo: 'public/logos/cukurova-uni.png',
+            logo: '/logos/cukurova-uni.png',
             institution: 'Cukurova University',
             title: 'B. Sc. Elektrotechnik',
             school: 'Faculty of Engineering',
