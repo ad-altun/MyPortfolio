@@ -7,7 +7,7 @@ export default function Experience() {
     const experienceData: ResumeCardProps[] = [
         {
             type: 'experience',
-            logo: 'public/logos/neue-fische.png',
+            logo: '/logos/neue-fische.png',
             institution: 'neuefische GmbH',
             title: 'Java Backend-Entwicklung Bootcamp',
             location: 'Remote',
@@ -23,7 +23,7 @@ export default function Experience() {
         },
         {
             type: 'experience',
-            logo: 'public/logos/ziegler-logo.png',
+            logo: '/logos/ziegler-logo.png',
             institution: 'Albert Ziegler GmbH',
             title: 'Softwareentwickler',
             location: 'Giengen an der Brenz, Deutschland',
@@ -38,7 +38,7 @@ export default function Experience() {
         },
         {
             type: 'experience',
-            logo: 'public/logos/temsa-logo.png',
+            logo: '/logos/temsa-logo.png',
             institution: 'Temsa Global - Bus & Coach',
             title: 'Internationaler Kundendienstkoordinator',
             location: 'Adana, Turkey',
