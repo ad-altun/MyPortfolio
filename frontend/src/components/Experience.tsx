@@ -7,7 +7,7 @@ export default function Experience() {
     const experienceData: ResumeCardProps[] = [
         {
             type: 'experience',
-            logo: 'public/logos/neue-fische-logo.png',
+            logo: 'public/logos/neue-fische.png',
             institution: 'neuefische GmbH',
             title: 'Java Backend-Entwicklung Bootcamp',
             location: 'Remote',
