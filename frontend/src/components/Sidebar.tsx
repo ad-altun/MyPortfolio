@@ -30,7 +30,7 @@ export default function Sidebar() {
             icon: <MdOutlineEmail />,
             title: "EMAIL",
             value: "adaltun",
-            href: "mailto:adaltun@web.de",
+            href: "mailto:contact@denizaltun.de",
         },
         {
             icon: <FiGithub/>,
