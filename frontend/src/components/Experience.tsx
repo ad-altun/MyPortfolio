@@ -57,11 +57,11 @@ export default function Experience() {
         <Box id="experience" sx={{  }}>
             <Container maxWidth="md">
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1 }}>
-                    <Work sx={{ fontSize: 32, color: 'primary.main' }} />
+                    <Work sx={{ fontSize: 28, color: 'primary.main' }} />
                     <Typography
                         variant="h3"
                         sx={{
-                            typography: { xs: 'h5', md: 'h4' }, mb: 1,
+                            typography: { xs: 'h6', md: 'h5' }, mb: 1,
                         }}
                         component="h2"
                         fontWeight="bold"

@@ -25,6 +25,7 @@ export default function Sidebar() {
             icon: <IoLocationOutline/>,
             title: "LOCATION",
             value: "BW, Germany",
+            href: "",
         },
         {
             icon: <MdOutlineEmail />,

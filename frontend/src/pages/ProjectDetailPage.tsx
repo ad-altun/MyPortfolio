@@ -16,7 +16,7 @@ const projectsData = {
     pertitrack: {
         id: 'pertitrack',
         title: 'PerTiTrack',
-        period: 'January 2024 - Present',
+        period: 'August 2025 - Present',
         type: 'Fullstack' as const,
         image: 'https://raw.githubusercontent.com/ad-altun/PerTiTrack/refs/heads/main/docs/screenshots/dashboard.png',
         technologies: [
@@ -182,7 +182,7 @@ export default function ProjectDetailPage() {
                 <Box sx={{ mb: 4 }}>
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', mb: 2 }}>
                         <Box>
-                            <Typography variant="h3" fontWeight="bold" gutterBottom>
+                            <Typography variant="h4" fontWeight="bold" gutterBottom>
                                 {project.title}
                             </Typography>
                             <Typography variant="body1" color="text.secondary">
@@ -215,13 +215,14 @@ export default function ProjectDetailPage() {
                     </Box>
 
                     {/* Action Buttons */}
-                    <Box sx={{ display: 'flex', gap: 2, mb: 4 }}>
+                    <Box sx={{ display: 'flex', gap: 3, mb: 3 }}>
                         {project.demoUrl && (
                             <Button
                                 variant="contained"
                                 startIcon={<Launch />}
                                 href={project.demoUrl}
                                 target="_blank"
+                                size="small"
                             >
                                 Live Demo
                             </Button>
@@ -232,6 +233,7 @@ export default function ProjectDetailPage() {
                                 startIcon={<GitHub />}
                                 href={project.githubUrl}
                                 target="_blank"
+                                size="small"
                             >
                                 View Code
                             </Button>
@@ -267,7 +269,7 @@ export default function ProjectDetailPage() {
                 <Paper
                     elevation={0}
                     sx={{
-                        p: 4,
+                        px: 4, pb: 3,
                         border: '1px solid',
                         borderColor: 'divider',
                         borderRadius: 2,
