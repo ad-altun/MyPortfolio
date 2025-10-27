@@ -1,43 +1,43 @@
 import { Box, Container, Typography, Divider } from '@mui/material';
+import TechStack from "./TechStack.tsx";
 
 export const About = () => (
-    <Box id="about" sx={{ py: 3, px: 1, }}>
+    <Box id="about" sx={ { py: 3, px: 1, } }>
         <Container maxWidth="lg">
             <Typography
                 variant="h3"
-                sx={{
+                sx={ {
                     typography: { xs: 'h5', md: 'h4' },
-                }}
-                component="h2" gutterBottom fontWeight="bold" mb={1}>
+                } }
+                component="h2" gutterBottom fontWeight="bold" mb={ 1 }>
                 About Me
             </Typography>
-            <Divider sx={{ mb: 3, width: '10%', height: '3px', bgcolor: 'primary.main' }} />
-            <Box sx={{
+            <Divider sx={ { mb: 3, width: '10%', height: '3px', bgcolor: 'primary.main' } }/>
+            <Box sx={ {
                 mb: 4, display: 'flex', flexDirection: 'column',
                 gap: 3, textAlign: 'justify',
-            }}>
-                <Typography component="p" color="text.secondary" sx={{ lineHeight: 1.8 }}>
-                    I'm a software developer focused on Java backend and React frontend development,
-                    building reliable and efficient web applications.
+            } }>
+                <Typography component="p" color="text.secondary" sx={ { lineHeight: 1.8 } }>
+                    I'm a software developer transitioning from embedded systems to modern web development,
+                    focusing on Java backend and React frontend technologies.
                 </Typography>
-                <Typography component="p" color="text.secondary" sx={{ lineHeight: 1.8 }}>
-                    Over the past 2.5 years, I’ve worked on C-based systems for commercial vehicles,
-                    gaining experience in software design, debugging, and technical documentation.
+                <Typography component="p" color="text.secondary" sx={ { lineHeight: 1.8 } }>
+                    I build efficient, reliable applications
+                    using Spring Boot, TypeScript, and Docker, and enjoy combining structured thinking from my embedded background
+                    with modern development practices.
                 </Typography>
-                <Typography component="p" color="text.secondary" sx={{ lineHeight: 1.8 }}>
-                    My background has strengthened my analytical and problem-solving skills.
-                    I’ve worked with MATLAB/Simulink for model predictive control and
-                    C++ with ROS for robotics applications.
+                <Typography component="p" color="text.secondary" sx={ { lineHeight: 1.8 } }>
+                    Feel free to explore my projects and live applications. You can also visit my GitHub for more
+                    technical details or connect with me on LinkedIn. I’m always open to new opportunities and collaborations.
                 </Typography>
-                <Typography component="p" color="text.secondary" sx={{ lineHeight: 1.8 }}>
-                    I value clean, maintainable code and enjoy working in collaborative teams.
-                    I’m always eager to learn new tools and contribute to meaningful projects.
-                </Typography>
+
+
             </Box>
-            {/*<Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 3 }}>*/}
-            {/*    <LocationOn color="action" />*/}
-            {/*    <Typography color="text.secondary">Baden-Württemberg, Germany</Typography>*/}
-            {/*</Box>*/}
+            {/*<Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 3 }}>*/ }
+            {/*    <LocationOn color="action" />*/ }
+            {/*    <Typography color="text.secondary">Baden-Württemberg, Germany</Typography>*/ }
+            {/*</Box>*/ }
+            <TechStack/>
         </Container>
     </Box>
 );
