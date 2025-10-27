@@ -11,7 +11,8 @@ type ThemeProviderProps = {
 export const CustomThemeProvider = ( { children }: ThemeProviderProps ) => {
     const [ themeMode, setThemeMode ] = useState<ThemeMode>(() => {
         const savedTheme = localStorage.getItem('theme');
-        return savedTheme ? ( savedTheme as ThemeMode ) : 'system';
+        // changed from 'system' to 'dark' to prevent light mode activation
+        return savedTheme ? ( savedTheme as ThemeMode ) : 'dark';
     });
 
     const getSystemTheme = (): 'light' | 'dark' => {
@@ -52,31 +53,34 @@ export const CustomThemeProvider = ( { children }: ThemeProviderProps ) => {
         setThemeMode(newMode);
     };
 
+    // website is forced to use only dark mode
+    // this might be temporary, therefore code didn't removed
     const theme = createTheme({
         palette: {
-            mode: actualTheme,
-            ...( actualTheme === 'light' ? {
+            mode: "dark",
+            // mode: actualTheme,
+            // ...( actualTheme === 'light' ? {
+            //     primary: {
+            //         main: '#fbbf24',
+            //         // light mode disabled for the moment
+            //         // main: '#4f46e5',
+            //     },
+            //     background: {
+            //         default: '#0f172a',
+            //         paper: '#1e293b',
+            //         // light mode disabled for the moment
+            //         // default: '#f8fafc',
+            //         // paper: '#ffffff',
+            //     },
+            // } : {
                 primary: {
                     main: '#fbbf24',
-                    // light mode disabled for the moment
-                    // main: '#4f46e5',
                 },
                 background: {
                     default: '#0f172a',
                     paper: '#1e293b',
-                    // light mode disabled for the moment
-                    // default: '#f8fafc',
-                    // paper: '#ffffff',
                 },
-            } : {
-                primary: {
-                    main: '#fbbf24',
-                },
-                background: {
-                    default: '#0f172a',
-                    paper: '#1e293b',
-                },
-            } )
+            // } )
         },
         typography: {
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
@@ -84,11 +88,11 @@ export const CustomThemeProvider = ( { children }: ThemeProviderProps ) => {
     });
 
     return (
-        <ThemeContext.Provider value={{ themeMode, toggleTheme, setMode, actualTheme }}>
-            <MuiThemeProvider theme={theme}>
-                <CssBaseline />
+        <ThemeContext.Provider value={ { themeMode, toggleTheme, setMode, actualTheme } }>
+            <MuiThemeProvider theme={ theme }>
+                <CssBaseline/>
                 { children }
             </MuiThemeProvider>
         </ThemeContext.Provider>
-    )
+    );
 };
