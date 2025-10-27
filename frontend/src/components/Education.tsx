@@ -41,11 +41,11 @@ export default function Education() {
         <Box id="education" sx={{ py: 5, px: 1,  }}>
             <Container maxWidth="md">
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1 }}>
-                    <School sx={{ fontSize: 32, color: 'primary.main' }} />
+                    <School sx={{ fontSize: 28, color: 'primary.main' }} />
                     <Typography
                         variant="h3"
                         sx={{
-                            typography: { xs: 'h5', md: 'h4' }, mb: 1,
+                            typography: { xs: 'h6', md: 'h5' }, mb: 1,
                         }}
                         component="h2"
                         fontWeight="bold"

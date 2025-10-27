@@ -77,6 +77,8 @@ export const Projects = () => {
                       sx={{
                           display: 'flex', justifyContent: 'center',
                           alignItems: 'center', gap: '2rem',
+                          // mt: '3.5rem',
+                          pt: { xs: 2, lg: 3}
                 }}
                 >
                     {projects.map((project) => (

@@ -25,7 +25,7 @@ export default function Resume() {
                 </Box>
                 <Divider sx={{ mb: 4, width: '10%', height: '3px', bgcolor: 'primary.main' }} />
                 <Box sx={ {
-                    py: 5, px: 1,
+                    py: 1, px: 1,
                 }} >
                     <Experience/>
                 </Box>
