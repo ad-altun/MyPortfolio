@@ -4,7 +4,7 @@ import {
     Storage,
     DataObject,
     CloudQueue,
-    // Build,
+    Build,
     // BugReport,
 } from '@mui/icons-material';
 
@@ -14,26 +14,26 @@ const techStackData = {
         icon: Code,
         color: '#61DAFB',
         technologies: [
-            { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+            { name: 'React', logo: 'techStackLogos/react-original.svg' },
             {
                 name: 'TypeScript',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+                logo: 'techStackLogos/typescript-original.svg'
             },
             {
                 name: 'JavaScript',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+                logo: 'techStackLogos/javascript-original.svg'
             },
             {
                 name: 'Material-UI',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg'
+                logo: 'techStackLogos/materialui-original.svg'
             },
             {
                 name: 'Tailwind CSS',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg'
+                logo: 'techStackLogos/-original.svg'
             },
-            { name: 'HTML5', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
-            { name: 'CSS3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
-            { name: 'Vite', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' },
+            { name: 'HTML5', logo: 'techStackLogos/html5-original.svg' },
+            { name: 'CSS3', logo: 'techStackLogos/css3-original.svg' },
+            { name: 'Vite', logo: 'techStackLogos/vitejs-original.svg' },
         ],
     },
     backend: {
@@ -41,23 +41,19 @@ const techStackData = {
         icon: Storage,
         color: '#007396',
         technologies: [
-            { name: 'Java', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+            { name: 'Java', logo: 'techStackLogos/java-original.svg' },
             {
                 name: 'Spring Boot',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg'
+                logo: 'techStackLogos/spring-original.svg'
             },
             {
                 name: 'Spring Security',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg'
+                logo: 'techStackLogos/spring-original.svg'
             },
-            {
-                name: 'Spring Security',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg'
-            },
-            { name: 'JUnit 5', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/junit/junit-original.svg' },
+            { name: 'JUnit 5', logo: 'techStackLogos/junit-original.svg' },
             {
                 name: 'Mockito',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mockito/mockito-original.svg'
+                logo: 'techStackLogos/mockito-original.svg'
             },
             // { name: 'Mockito', logo: 'https://github.com/devicons/devicon/tree/v2.17.0/icons/mockito/mockito-original.svg' },
         ],
@@ -69,15 +65,15 @@ const techStackData = {
         technologies: [
             {
                 name: 'PostgreSQL',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg'
+                logo: 'techStackLogos/postgresql-original.svg'
             },
             {
                 name: 'MongoDB',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'
+                logo: 'techStackLogos/mongodb-original.svg'
             },
             {
                 name: 'Hibernate',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-original.svg'
+                logo: 'techStackLogos/hibernate-original.svg'
             },
         ],
     },
@@ -86,32 +82,32 @@ const techStackData = {
         icon: CloudQueue,
         color: '#2496ED',
         technologies: [
-            { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
-            { name: 'GitHub', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
+            { name: 'Docker', logo: 'techStackLogos/docker-original.svg' },
+            { name: 'GitHub', logo: 'techStackLogos/github-original.svg' },
             {
                 name: 'GitHub Actions',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg'
+                logo: 'techStackLogos/githubactions-original.svg'
             },
             {
                 name: 'SonarQube',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sonarqube/sonarqube-original.svg'
+                logo: 'techStackLogos/sonarqube-original.svg'
             },
             // { name: 'Linux', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
             // { name: 'Nginx', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg' },
         ],
     },
-    // tools: {
-    //     title: 'Tools & IDEs',
-    //     icon: Build,
-    //     color: '#FF6B6B',
-    //     technologies: [
-    //         { name: 'IntelliJ IDEA', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg' },
-    //         { name: 'VS Code', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
-    //         { name: 'Postman', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg' },
-    //         { name: 'Maven', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg' },
-    //         { name: 'npm', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg' },
-    //     ],
-    // },
+    tools: {
+        title: 'Tools & IDEs',
+        icon: Build,
+        color: '#FF6B6B',
+        technologies: [
+            { name: 'IntelliJ IDEA', logo: 'techStackLogos/intellij-original.svg' },
+            { name: 'VS Code', logo: 'techStackLogos/vscode-original.svg' },
+            { name: 'Postman', logo: 'techStackLogos/postman-original.svg' },
+            { name: 'Maven', logo: 'techStackLogos/maven-original.svg' },
+            { name: 'npm', logo: 'techStackLogos/npm-original-wordmark.svg' },
+        ],
+    },
     // other: {
     //     title: 'Other',
     //     icon: BugReport,
@@ -158,10 +154,10 @@ export default function TechStack() {
                                     borderColor: 'divider',
                                     borderRadius: 2,
                                     display: 'flex',
-                                    maxWidth: '19rem',
+                                    maxWidth: '15rem',
                                     maxHeight: '10rem',
                                     width:'100%',
-                                    justifyContent: 'space-between',
+                                    justifyContent: 'flex-start',
                                     flexDirection: { xs: 'column', },
                                     gap: { xs: .25,  },
                                     transition: 'all 0.3s ease',

@@ -24,8 +24,7 @@ export default function Sidebar() {
         {
             icon: <IoLocationOutline/>,
             title: "LOCATION",
-            value: "BW, Germany",
-            href: "",
+            value: "Baden-Württemberg, Germany",
         },
         {
             icon: <MdOutlineEmail />,
@@ -60,7 +59,6 @@ export default function Sidebar() {
             sx={ {
                 // width: '10rem',
                 minHeight: { xs: 'auto', lg: 'calc(100vh - 15rem)' },
-                // overflow: 'auto',
                 padding: '1rem',
                 display: 'flex',
                 flexDirection: 'column',
@@ -97,7 +95,7 @@ export default function Sidebar() {
                         height: { xs: '5rem', md: '7rem', lg: '10rem' },
                         borderRadius: '20%',
                     } }
-                    src="https://i.ibb.co/HDQ357MF/profile-image.jpg"
+                    src="profile-image.jpg"
                     alt="profile-image"
                 />
 
@@ -176,16 +174,25 @@ export default function Sidebar() {
                                     variant="caption" color="text.secondary" fontWeight="bold">
                                     { info.title }
                                 </Typography>
-                                <Link
-                                    variant="caption"
-                                    underline="hover"
-                                    color="text.primary"
-                                    component="a"
-                                    target={ info.target }
-                                    href={ info.href }
-                                >
-                                    { info.value }
-                                </Link>
+                                {info.href ? (
+                                    <Link
+                                        variant="caption"
+                                        underline="hover"
+                                        color="text.primary"
+                                        component="a"
+                                        target={ info.target }
+                                        href={ info.href }
+                                    >
+                                        { info.value }
+                                    </Link>
+                                ) : (
+                                    <Typography
+                                        variant="caption"
+                                        color="text.primary"
+                                    >
+                                        { info.value }
+                                    </Typography>
+                                )}
                             </Box>
                         </Box>
                     ))
