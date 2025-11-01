@@ -95,8 +95,8 @@ export default function Sidebar() {
                         height: { xs: '5rem', md: '7rem', lg: '10rem' },
                         borderRadius: '20%',
                     } }
-                    src="profile-image.jpg"
-                    alt="profile-image"
+                    src="/profile-image.jpg"
+                    alt="profile image"
                 />
 
                 <Box sx={ {

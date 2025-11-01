@@ -5,7 +5,6 @@ import {
     DataObject,
     CloudQueue,
     Build,
-    // BugReport,
 } from '@mui/icons-material';
 
 const techStackData = {
@@ -14,26 +13,26 @@ const techStackData = {
         icon: Code,
         color: '#61DAFB',
         technologies: [
-            { name: 'React', logo: 'techStackLogos/react-original.svg' },
+            { name: 'React', logo: '/techStackLogos/react-original.svg' },
             {
                 name: 'TypeScript',
-                logo: 'techStackLogos/typescript-original.svg'
+                logo: '/techStackLogos/typescript-original.svg'
             },
             {
                 name: 'JavaScript',
-                logo: 'techStackLogos/javascript-original.svg'
+                logo: '/techStackLogos/javascript-original.svg'
             },
             {
                 name: 'Material-UI',
-                logo: 'techStackLogos/materialui-original.svg'
+                logo: '/techStackLogos/materialui-original.svg'
             },
             {
                 name: 'Tailwind CSS',
-                logo: 'techStackLogos/-original.svg'
+                logo: '/techStackLogos/tailwindcss-mark.svg'
             },
-            { name: 'HTML5', logo: 'techStackLogos/html5-original.svg' },
-            { name: 'CSS3', logo: 'techStackLogos/css3-original.svg' },
-            { name: 'Vite', logo: 'techStackLogos/vitejs-original.svg' },
+            { name: 'HTML5', logo: '/techStackLogos/html5-original.svg' },
+            { name: 'CSS3', logo: '/techStackLogos/css3-original.svg' },
+            { name: 'Vite', logo: '/techStackLogos/vitejs-original.svg' },
         ],
     },
     backend: {
@@ -41,19 +40,19 @@ const techStackData = {
         icon: Storage,
         color: '#007396',
         technologies: [
-            { name: 'Java', logo: 'techStackLogos/java-original.svg' },
+            { name: 'Java', logo: '/techStackLogos/java-original.svg' },
             {
                 name: 'Spring Boot',
-                logo: 'techStackLogos/spring-original.svg'
+                logo: '/techStackLogos/spring-original.svg'
             },
             {
                 name: 'Spring Security',
-                logo: 'techStackLogos/spring-original.svg'
+                logo: '/techStackLogos/spring-original.svg'
             },
-            { name: 'JUnit 5', logo: 'techStackLogos/junit-original.svg' },
+            { name: 'JUnit 5', logo: '/techStackLogos/junit-original.svg' },
             {
                 name: 'Mockito',
-                logo: 'techStackLogos/mockito-original.svg'
+                logo: '/techStackLogos/mockito-original.svg'
             },
             // { name: 'Mockito', logo: 'https://github.com/devicons/devicon/tree/v2.17.0/icons/mockito/mockito-original.svg' },
         ],
@@ -65,15 +64,15 @@ const techStackData = {
         technologies: [
             {
                 name: 'PostgreSQL',
-                logo: 'techStackLogos/postgresql-original.svg'
+                logo: '/techStackLogos/postgresql-original.svg'
             },
             {
                 name: 'MongoDB',
-                logo: 'techStackLogos/mongodb-original.svg'
+                logo: '/techStackLogos/mongodb-original.svg'
             },
             {
                 name: 'Hibernate',
-                logo: 'techStackLogos/hibernate-original.svg'
+                logo: '/techStackLogos/hibernate-original.svg'
             },
         ],
     },
@@ -82,15 +81,15 @@ const techStackData = {
         icon: CloudQueue,
         color: '#2496ED',
         technologies: [
-            { name: 'Docker', logo: 'techStackLogos/docker-original.svg' },
-            { name: 'GitHub', logo: 'techStackLogos/github-original.svg' },
+            { name: 'Docker', logo: '/techStackLogos/docker-original.svg' },
+            { name: 'GitHub', logo: '/techStackLogos/github-original.svg' },
             {
                 name: 'GitHub Actions',
-                logo: 'techStackLogos/githubactions-original.svg'
+                logo: '/techStackLogos/githubactions-original.svg'
             },
             {
                 name: 'SonarQube',
-                logo: 'techStackLogos/sonarqube-original.svg'
+                logo: '/techStackLogos/sonarqube-original.svg'
             },
             // { name: 'Linux', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
             // { name: 'Nginx', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg' },
@@ -101,21 +100,13 @@ const techStackData = {
         icon: Build,
         color: '#FF6B6B',
         technologies: [
-            { name: 'IntelliJ IDEA', logo: 'techStackLogos/intellij-original.svg' },
-            { name: 'VS Code', logo: 'techStackLogos/vscode-original.svg' },
-            { name: 'Postman', logo: 'techStackLogos/postman-original.svg' },
-            { name: 'Maven', logo: 'techStackLogos/maven-original.svg' },
-            { name: 'npm', logo: 'techStackLogos/npm-original-wordmark.svg' },
+            { name: 'IntelliJ IDEA', logo: '/techStackLogos/intellij-original.svg' },
+            { name: 'VS Code', logo: '/techStackLogos/vscode-original.svg' },
+            { name: 'Postman', logo: '/techStackLogos/postman-original.svg' },
+            { name: 'Maven', logo: '/techStackLogos/maven-original.svg' },
+            { name: 'npm', logo: '/techStackLogos/npm-original-wordmark.svg' },
         ],
     },
-    // other: {
-    //     title: 'Other',
-    //     icon: BugReport,
-    //     color: '#9B59B6',
-    //     technologies: [
-    //         { name: 'MATLAB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg' },
-    //     ],
-    // },
 };
 
 export default function TechStack() {
@@ -155,7 +146,7 @@ export default function TechStack() {
                                     borderRadius: 2,
                                     display: 'flex',
                                     maxWidth: '15rem',
-                                    maxHeight: '10rem',
+                                    maxHeight: '11rem',
                                     width:'100%',
                                     justifyContent: 'flex-start',
                                     flexDirection: { xs: 'column', },
