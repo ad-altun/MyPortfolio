@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my projects, experience, and s
 
 **Live Demo:** [denizaltun.de/](https://denizaltun.de/)
 
-![Portfolio Preview](https://i.ibb.co/4gwh8svP/denizaltun-de.png)
+![Portfolio Preview](frontend/public/screenshots/projects.png)
 
 ---
 
