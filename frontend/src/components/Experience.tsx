@@ -7,8 +7,8 @@ export default function Experience() {
     const experienceData: ResumeCardProps[] = [
         {
             type: 'experience',
-            logo: '/logos/neue-fische.png',
-            institution: 'neuefische GmbH',
+            logo: '/resumeLogos/neue-fische.png',
+            institution: 'neue fische GmbH',
             title: 'Java Backend-Entwicklung Bootcamp',
             location: 'Remote',
             period: 'Jun. 2025 - Sep. 2025',
@@ -23,7 +23,7 @@ export default function Experience() {
         },
         {
             type: 'experience',
-            logo: '/logos/ziegler-logo.png',
+            logo: '/resumeLogos/ziegler-logo.png',
             institution: 'Albert Ziegler GmbH',
             title: 'Softwareentwickler',
             location: 'Giengen an der Brenz, Deutschland',
@@ -38,10 +38,10 @@ export default function Experience() {
         },
         {
             type: 'experience',
-            logo: '/logos/temsa-logo.png',
+            logo: '/resumeLogos/temsa-logo.png',
             institution: 'Temsa Global - Bus & Coach',
             title: 'Internationaler Kundendienstkoordinator',
-            location: 'Adana, Turkey',
+            location: 'Adana, Türkei',
             period: 'Dez. 2015 - Jul. 2017',
             details: [
                 'Bereitstellung von elektrischem, mechanischem oder softwarebezogenem Support durch Zusammenarbeit mit Werksabteilungen, OEM und Kunden.',
