@@ -33,10 +33,6 @@ export const About = () => (
 
 
             </Box>
-            {/*<Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 3 }}>*/ }
-            {/*    <LocationOn color="action" />*/ }
-            {/*    <Typography color="text.secondary">Baden-Württemberg, Germany</Typography>*/ }
-            {/*</Box>*/ }
             <TechStack/>
         </Container>
     </Box>
