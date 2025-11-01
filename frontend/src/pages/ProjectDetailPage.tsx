@@ -18,7 +18,6 @@ export default function ProjectDetailPage() {
     const navigate = useNavigate();
 
     const project = projectId ? getProjectById(projectId) : null;
-    console.log(project)
 
     if ( !project ) {
         return (
