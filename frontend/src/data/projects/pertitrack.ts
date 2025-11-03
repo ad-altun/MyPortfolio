@@ -1,6 +1,5 @@
 import { type ProjectData } from '../projectTypes.ts';
 
-
 export const pertitrackProjectData: ProjectData = {
     // Unique identifier for the project (used in URLs)
     id: 'pertitrack',
@@ -44,18 +43,22 @@ export const pertitrackProjectData: ProjectData = {
     readme: `
 # PerTiTrack - Personnel Time Tracking System
 
-Enterprise-grade time tracking application with comprehensive features for managing personnel, work hours, and absences.
+Capstone project showcasing full-stack development skills: A time tracking application with essential features for recording work hours, managing breaks, and tracking absences.
 
 ## Features
 
 ### Core Functionality
 - **Quick Clock In/Out**: Automatic timestamp recording with one-click interface
 - **Absence Tracking**: Comprehensive absence tracking in year view
+- **Location Tracking**: Record work location (office, home office, business trip)
+- **Today's Summary**: Real-time dashboard showing daily work hours and break times
+- **Absence Calendar**: Year-view calendar for reviewing employee absence records
+- **Time Record Notes**: Add notes to individual time entries
 
 ### Technical Features
 - **JWT Authentication**: Secure token-based authentication system
 - **RESTful API**: Clean, documented API architecture
-- **Responsive Design**: Mobile-first approach with responsive layouts
+- **Responsive Design**: Clean, mobile-friendly interface with Material-UI components
 
 ## Tech Stack
 
@@ -94,11 +97,11 @@ Backend (Spring Boot)
 └── Security (JWT)
 
 Frontend (React)
-├── Components (UI elements)
+├── Components (Reusable UI elements)
 ├── Pages (Route views)
-├── Services (API calls)
-├── Redux Toolkit (State management)
-└── RTK-Query (API data fetching & caching)
+├── Services (API integration)
+├── Redux Toolkit (Global State management)
+└── RTK-Query (Server state & caching)
 
 \`\`\`
 
@@ -113,11 +116,11 @@ Frontend (React)
 
 ## Performance
 
-- Optimized database queries with JPA
-- Lazy loading for related entities
-- Frontend code splitting
+- Clean REST API architecture
+- JPA for database operations with relationship management
+- React component optimization
 - Docker multi-stage builds for smaller images
-- Caching strategies for frequent queries
+- Environment-based configuration
 
 ## Testing
 
@@ -138,6 +141,7 @@ The application is deployed on a self-hosted infrastructure:
 
 ## Key Learnings
 
+- Building a full-stack application from scratch
 - Implementing secure authentication with JWT
 - Building RESTful APIs with Spring Boot
 - State management in React applications
@@ -147,13 +151,5 @@ The application is deployed on a self-hosted infrastructure:
 - Self-hosted deployment on VPS
 - Infrastructure management with Coolify
 - Reverse proxy configuration with Caddy
-
-## Future Enhancements
-
-- Email notifications for important events
-- Advanced reporting and analytics dashboard
-- Export functionality (PDF, Excel)
-- Integration with HR systems
-- Multi-tenant architecture
 `,
 };
