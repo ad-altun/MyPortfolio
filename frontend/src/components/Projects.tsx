@@ -37,8 +37,8 @@ export const Projects = () => {
                 {/* Projects Grid */}
                 <Grid container spacing={3}
                       sx={{
-                          display: 'flex', justifyContent: 'center',
-                          alignItems: 'center', gap: '2rem',
+                          display: 'flex', justifyContent: { xs:'center', lg: 'flex-start' },
+                          alignItems: 'flex-start', gap: '3rem 5rem',
                           // mt: '3.5rem',
                           pt: { xs: 2, lg: 3}
                 }}
