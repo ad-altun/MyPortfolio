@@ -1,6 +1,7 @@
 import { type ProjectData } from '../projectTypes.ts';
 import { pertitrackProjectData } from './pertitrack';
 import { restCountriesProjectData } from "./restCountries.ts";
+import { warehouseProjectData } from "./warehouse.ts";
 
 /**
  * Central registry of all portfolio projects
@@ -12,6 +13,7 @@ import { restCountriesProjectData } from "./restCountries.ts";
 export const projectsRegistry: Record<string, ProjectData> = {
     pertitrack: pertitrackProjectData,
     restCountries: restCountriesProjectData,
+    warehouse: warehouseProjectData,
 };
 
 /**
