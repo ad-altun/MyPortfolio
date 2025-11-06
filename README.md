@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my projects, experience, and skills as a Full-Stack Developer specializing in Java Backend and React development.
 
-**Live Demo:** [denizaltun.de/](https://denizaltun.de/)
+**Live Demo:** [denizaltun.de](https://denizaltun.de/)
 
 ![Portfolio Preview](frontend/public/screenshots/projects.png)
 
