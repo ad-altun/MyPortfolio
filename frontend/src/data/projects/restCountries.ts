@@ -28,7 +28,10 @@ export const restCountriesProjectData: ProjectData = {
     ],
 
     // Live demo URL
-    demoUrl: 'https://rest-countries.denizaltun.de/',
+    demoUrl: {
+        url: 'https://rest-countries.denizaltun.de/',
+        disabled: false
+    },
 
     // GitHub repository URL
     githubUrl: 'https://github.com/ad-altun/rest-countries-api/',
