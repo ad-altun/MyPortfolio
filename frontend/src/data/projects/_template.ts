@@ -42,7 +42,10 @@ export const templateProjectData: ProjectData = {
     ],
 
     // Optional: Live demo URL
-    demoUrl: 'https://demo.example.com',
+    demoUrl: {
+        url: 'https://demo.example.com',
+        disabled: false
+    },
 
     // GitHub repository URL
     githubUrl: 'https://github.com/username/repo',
