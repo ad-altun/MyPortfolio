@@ -30,7 +30,10 @@ export const warehouseProjectData: ProjectData = {
     ],
 
     // Optional: Live demo URL
-    demoUrl: 'https://warehouse.denizaltun.de/',
+    demoUrl: {
+        url: 'https://warehouse.denizaltun.de/',
+        disabled: false
+    },
 
     // GitHub repository URL
     githubUrl: 'https://github.com/ad-altun/inventory-control-crud-app',

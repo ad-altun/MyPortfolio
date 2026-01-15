@@ -30,6 +30,10 @@ const techStackData = {
                 name: 'Tailwind CSS',
                 logo: '/techStackLogos/tailwindcss-mark.svg'
             },
+            {
+                name: 'Chart.js',
+                logo: '/techStackLogos/chartjs-original.ico'
+            },
             { name: 'HTML5', logo: '/techStackLogos/html5-original.svg' },
             { name: 'CSS3', logo: '/techStackLogos/css3-original.svg' },
             { name: 'Vite', logo: '/techStackLogos/vitejs-original.svg' },
@@ -40,7 +44,7 @@ const techStackData = {
         icon: Storage,
         color: '#007396',
         technologies: [
-            { name: 'Java', logo: '/techStackLogos/java-original.svg' },
+            { name: 'Java 21', logo: '/techStackLogos/java-original.svg' },
             {
                 name: 'Spring Boot',
                 logo: '/techStackLogos/spring-original.svg'
@@ -81,6 +85,7 @@ const techStackData = {
         icon: CloudQueue,
         color: '#2496ED',
         technologies: [
+            { name: 'Azure', logo: '/techStackLogos/azure.svg' },
             { name: 'Docker', logo: '/techStackLogos/docker-original.svg' },
             { name: 'GitHub', logo: '/techStackLogos/github-original.svg' },
             {

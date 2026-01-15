@@ -1,7 +1,8 @@
-import { type ProjectData } from '../projectTypes.ts';
+import { type ProjectData } from '../projectTypes';
 import { pertitrackProjectData } from './pertitrack';
-import { restCountriesProjectData } from "./restCountries.ts";
-import { warehouseProjectData } from "./warehouse.ts";
+import { restCountriesProjectData } from "./restCountries";
+import { warehouseProjectData } from "./warehouse";
+import { emergencywatchProjectData } from "./emergencywatch"
 
 /**
  * Central registry of all portfolio projects
@@ -11,6 +12,7 @@ import { warehouseProjectData } from "./warehouse.ts";
  * 3. Add it to the projectsRegistry object
  */
 export const projectsRegistry: Record<string, ProjectData> = {
+    emergencywatch: emergencywatchProjectData,
     pertitrack: pertitrackProjectData,
     restCountries: restCountriesProjectData,
     warehouse: warehouseProjectData,

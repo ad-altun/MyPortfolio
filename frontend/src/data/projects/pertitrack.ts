@@ -29,7 +29,10 @@ export const pertitrackProjectData: ProjectData = {
     ],
 
     // Live demo URL
-    demoUrl: 'https://pertitrack.denizaltun.de/',
+    demoUrl: {
+        url: 'https://pertitrack.denizaltun.de/',
+        disabled: false
+    },
 
     // GitHub repository URL
     githubUrl: 'https://github.com/ad-altun/PerTiTrack',

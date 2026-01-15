@@ -17,7 +17,10 @@ export interface ProjectCardProps {
     type: "All" | "Frontend" | "Backend" | "Fullstack";
     image: string;
     technologies: string[];
-    demoUrl?: string;
+    demoUrl?: {
+        url: string,
+        disabled?: boolean
+    };
     githubUrl?: string;
     description?: string;
 }
@@ -122,8 +125,15 @@ export default function ProjectCard( {
                             variant="contained"
                             startIcon={ <Launch/> }
                             size="small"
-                            onClick={ ( e ) => handleButtonClick(e, demoUrl) }
-                            sx={ { flex: 1 } }
+                            disabled = {demoUrl.disabled}
+                            onClick={ ( e ) => handleButtonClick(e, demoUrl?.url) }
+                            sx={{
+                                flex: 1,
+                                "&.Mui-disabled": {
+                                    cursor: 'not-allowed',
+                                    pointerEvents: 'auto'
+                                }
+                            }}
                         >
                             Live Demo
                         </Button>

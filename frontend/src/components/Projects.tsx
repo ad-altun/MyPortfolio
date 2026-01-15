@@ -3,16 +3,26 @@ import {
     Container,
     Typography,
     Grid,
-    Divider,
+    Divider, Chip, Stack,
 } from '@mui/material';
 
 import ProjectCard from "./ProjectCard.tsx";
 import { getAllProjects } from "../data/projects/projectIndex.ts";
+import { useState } from "react";
+import type { ProjectType } from "../data/projectTypes.ts";
 
 
 export const Projects = () => {
+    const [ selectedType, setSelectedType ] = useState<ProjectType | 'All'>('All');
+    const allProjects = getAllProjects();
 
-    const projects = getAllProjects();
+    // filter projects based on selected type
+    const projects = selectedType === 'All' ?
+        allProjects :
+        allProjects.filter(project => project.type === selectedType);
+
+    // Get unique project types from existing projects
+    const projectTypes: Array<ProjectType | 'All'> = ['All', 'Fullstack', 'Backend', 'Frontend'];
 
     return (
         <Box sx={{ py: 3, px: 1, }}>
@@ -34,18 +44,45 @@ export const Projects = () => {
                 </Box>
                 <Divider sx={{ mb: 4, width: '10%', height: '3px', bgcolor: 'primary.main' }} />
 
+                {/* Filter Chips */}
+                <Stack
+                    direction="row"
+                    spacing={1}
+                    sx={{
+                        mb: 4,
+                        flexWrap: 'wrap',
+                        gap: 1,
+                    }}
+                >
+                    {projectTypes.map((type) => (
+                        <Chip
+                            key={type}
+                            label={type}
+                            onClick={() => setSelectedType(type)}
+                            color={selectedType === type ? 'primary' : 'default'}
+                            variant={selectedType === type ? 'filled' : 'outlined'}
+                            sx={{
+                                fontWeight: selectedType === type ? 'bold' : 'normal',
+                                cursor: 'pointer',
+                                transition: 'all 0.2s ease-in-out',
+                                '&:hover': {
+                                    transform: 'translateY(-2px)',
+                                    boxShadow: 2,
+                                },
+                            }}
+                        />
+                    ))}
+                </Stack>
+
                 {/* Projects Grid */}
                 <Grid container spacing={3}
                       sx={{
-                          display: 'flex', justifyContent: { xs:'center', lg: 'flex-start' },
-                          alignItems: 'flex-start', gap: '3rem 5rem',
-                          // mt: '3.5rem',
                           pt: { xs: 2, lg: 3}
                 }}
                 >
                     {projects.map((project) => (
-                        <Grid sx={{ xs: 12, sm:6, lg: 3, }}
-                              key={project.id}>
+                        <Grid key={project.id}
+                              sx={{ xs:12, sm:6, lg:3, display: 'flex' }}>
                             <ProjectCard {...project} />
                         </Grid>
                     ))}

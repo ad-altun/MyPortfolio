@@ -11,6 +11,7 @@ import {
 import { ArrowBack, GitHub, Launch } from '@mui/icons-material';
 import ReactMarkdown from 'react-markdown';
 import { getProjectById } from '../data/projects/projectIndex.ts';
+import remarkGfm from "remark-gfm";
 
 
 export default function ProjectDetailPage() {
@@ -90,9 +91,16 @@ export default function ProjectDetailPage() {
                             <Button
                                 variant="contained"
                                 startIcon={ <Launch/> }
-                                href={ project.demoUrl }
+                                disabled={ project.demoUrl.disabled }
+                                href={ project.demoUrl.url }
                                 target="_blank"
                                 size="small"
+                                sx={{
+                                    "&.Mui-disabled": {
+                                        cursor: 'not-allowed',
+                                        pointerEvents: 'auto'
+                                    }
+                                }}
                             >
                                 Live Demo
                             </Button>
@@ -195,9 +203,34 @@ export default function ProjectDetailPage() {
                                 bgcolor: 'transparent',
                                 p: 0,
                             },
+                            '& table': {
+                                width: '100%',
+                                borderCollapse: 'collapse',
+                                mb: 2,
+                                mt: 2,
+                            },
+                            '& th': {
+                                border: '1px solid',
+                                borderColor: 'divider',
+                                padding: '12px',
+                                textAlign: 'left',
+                                fontWeight: 'bold',
+                                bgcolor: 'action.hover',
+                            },
+                            '& td': {
+                                border: '1px solid',
+                                borderColor: 'divider',
+                                padding: '12px',
+                            },
                         } }
                     >
-                        <ReactMarkdown>{ project.readme }</ReactMarkdown>
+                        {/*<ReactMarkdown remarkPlugins={[remarkGfm]}> { project.readme }</ReactMarkdown>*/}
+                        <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
+                            a(props) {
+                                // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                                const {node, ...rest} = props
+                                return <a style={{color: 'inherit', textDecoration: 'none', fontStyle: 'italic'}} {...rest} />
+                            }}}>{ project.readme }</ReactMarkdown>
                     </Box>
                 </Paper>
             </Container>

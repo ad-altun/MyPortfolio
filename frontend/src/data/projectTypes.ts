@@ -7,7 +7,10 @@ export interface ProjectData {
     type: ProjectType;
     image: string;
     technologies: string[];
-    demoUrl?: string;
+    demoUrl?: {
+        url: string,
+        disabled?: boolean,
+    };
     githubUrl?: string;
     description: string;
     readme: string;
