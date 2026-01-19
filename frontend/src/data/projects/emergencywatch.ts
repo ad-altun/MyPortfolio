@@ -32,7 +32,7 @@ export const emergencywatchProjectData: ProjectData = {
     // Optional: Live demo URL
     demoUrl: {
         url: 'https://emergencywatch.denizaltun.de',
-        disabled: true
+        disabled: false
     },
 
     // GitHub repository URL
